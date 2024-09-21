@@ -70,24 +70,24 @@ if uploaded_file is not None:
             st.write(f"{class_names[idx]}: {prob * 100:.2f}%")
 
         
-        st.subheader("Графики обучения модели")
+        sst.subheader("Graphs learning models")
         
-        # График функции потерь
+        
         fig_loss, ax_loss = plt.subplots()
-        ax_loss.plot(history['loss'], label='Тренировочные потери')
-        ax_loss.plot(history['val_loss'], label='Валидационные потери')
-        ax_loss.set_title('Функция потерь')
-        ax_loss.set_xlabel('Эпохи')
-        ax_loss.set_ylabel('Потери')
+        ax_loss.plot(history['loss'], label='Training losses')
+        ax_loss.plot(history['val_loss'], label='Validation losses')
+        ax_loss.set_title('Loss Function')
+        ax_loss.set_xlabel('Epochs')
+        ax_loss.set_ylabel('Loss')
         ax_loss.legend()
         st.pyplot(fig_loss)
         
-        # График точности
+        
         fig_acc, ax_acc = plt.subplots()
-        ax_acc.plot(history['accuracy'], label='Тренировочная точность')
-        ax_acc.plot(history['val_accuracy'], label='Валидационная точность')
-        ax_acc.set_title('Точность модели')
-        ax_acc.set_xlabel('Эпохи')
-        ax_acc.set_ylabel('Точность')
+        ax_acc.plot(history['accuracy'], label='Training losses')
+        ax_acc.plot(history['val_accuracy'], label='Validation losses')
+        ax_acc.set_title('Model accuracy')
+        ax_acc.set_xlabel('Epochs')
+        ax_acc.set_ylabel('Loss')
         ax_acc.legend()
         st.pyplot(fig_acc)
