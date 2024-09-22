@@ -60,7 +60,7 @@ if uploaded_file is not None:
         predicted_class = np.argmax(prediction, axis=1)
         class_probabilities = prediction[0]
         
-        class_names = ['Class 0', 'Class 1', 'Class 2','Class 3','Class 4','Class 5','Class 6','Class 7','Class 8','Class 9']  
+        class_names = ['T-shirt/top', 'Trouser', 'Pullover', 'Dress', 'Coat', 'Sandal', 'Shirt', 'Sneaker', 'Bag', 'Ankle Boot']  
         
        
         st.subheader("Classification results")
